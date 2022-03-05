@@ -25,30 +25,30 @@ fetchData(url);
 
 const createHeroBanner = (heroBanner) => {
   heroBannerSection.innerHTML = `
-		<div class="grid heroBanner">
-			<article class="article">
-			<h2>${heroBanner.title}</h2>
-			<p>${heroBanner.paragraph}</p>
-		</article>
-		<video controls autoplay loop>
-			<source src="${heroBanner.videoUrl}" type="video/mp4">
-		</video>
-		</div>
-	`;
+        <div class="grid heroBanner">
+            <article class="article">
+            <h2>${heroBanner.title}</h2>
+            <p>${heroBanner.paragraph}</p>
+        </article>
+        <video controls autoplay loop>
+            <source src="${heroBanner.videoUrl}" type="video/mp4">
+        </video>
+        </div>
+    `;
 };
 
 const createProfiles = (profiles) => {
   profiles.forEach((item) => {
     profilesSection.innerHTML += `
-		<div class="card">
-			<img src=${
-        item.imgUrl
-      } onError="this.onerror=null; this.src='/icons/noImage.jpeg';"/>
-			<div class="profileInfo">
-				<h3>${item.firstName + " " + item.lastName}</h3>
-				<p>${item.expertise}</p>
-			</div>
-		</div>
-		`;
+        <div class="card">
+            <img src=${
+              item.imgUrl
+            } onError="this.onerror=null; this.src='/icons/noImage.jpeg';"/>
+            <div class="profileInfo">
+                <h3>${item.firstName + " " + item.lastName}</h3>
+                <p>${item.expertise}</p>
+            </div>
+        </div>
+        `;
   });
 };
