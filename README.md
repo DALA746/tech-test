@@ -1,3 +1,3 @@
 Tech test
 
-Demo:
+Demo: https://daryas-tech-test.netlify.app/
