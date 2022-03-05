@@ -30,7 +30,7 @@ fetchData(url)
 const createHeroBanner = (heroBanner) => {
 	heroBannerSection.innerHTML = 
 	`
-		<div class="heroBanner">
+		<div class="grid heroBanner">
 			<article class="article">
 			<h2>${heroBanner.title}</h2>
 			<p>${heroBanner.paragraph}</p>
@@ -48,13 +48,12 @@ const createProfiles = (profiles) => {
 		profilesSection.innerHTML += 
 		`
 			<div class="card">
-			${item.imgUrl ? `<img src=${item.imgUrl} />` : `<h2>helloe</h2>`}
+			<img src=${item.imgUrl} />
 			<div class="profileInfo">
 				<h3>${item.firstName + " " + item.lastName}</h3>
 				<p>${item.expertise}</p>
 			</div>
 		</div>
-
 		`
 	})
 }

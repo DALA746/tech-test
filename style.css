@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -28,12 +29,15 @@ nav {
 	background-color: #26282e;
 }
 
+.grid {
+	display: grid;
+	grid-auto-rows: auto;
+	margin: 30px 0;
+}
+
 .heroBanner {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 30px;
-	gap: 16px;
+	grid-gap: 9rem;
+	grid-template-columns: repeat(2, 2fr);
 }
 
 .article {
@@ -52,12 +56,11 @@ nav {
 }
 
 video {
-	width: 100%;
+	width: 375px;
 }
 
 .card {
-	display: flex;
-	width: 100%;
+	width: 287px;
 	color: white;
 	background-color: #26282e;
 }
@@ -71,18 +74,27 @@ img {
 	float: right;
 	width: 50%;
 	text-align: center;
-	margin: 39px auto;
-	font-size: 12px;
-	line-height: 24px;
+	margin-top: 20px;
+	line-height: 40px;
+}
+
+.profileInfo h3, p {
+	font-size: 16px;
+	margin: 0;
 }
 
 .profiles {
-	display:flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 30px;
-	gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+	/*display: grid;
+ 
+grid-template-columns: repeat(3, 1fr);
+ 
+grid-auto-rows: auto;
+ 
+grid-gap: 1rem;
+justify-content: center;*/
+
 }
 
 footer {
@@ -93,6 +105,39 @@ footer {
 	background-color: #26282e;
 }
 
+@media(min-width: 756px) and (max-width: 956px) {
+	.heroBanner {
+		grid-gap: 1rem;
+	}
+
+	.profiles {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.card {
+    width: 376px;
+	}
+}
+
+@media(min-width: 300px) and (max-width: 755px) {
+	.heroBanner {
+		grid-gap: 1rem;
+		justify-self: end;
+	}
+
+	video {
+		justify-self: end;
+	}
+
+	.profiles {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.card {
+    width: 376px;
+	}
+}
+/*
 @media (min-width: 768px) {
 	.heroBanner {
 		flex-direction: row;
@@ -107,12 +152,18 @@ footer {
 	}
 
 	.card {
-		width: 272px;
+		width: 349px;
+	}
+
+	.profileInfo {
+		font-size: 14px;
 	}
 }
 
 @media (min-width: 1024px) {
-
-}
+	.card {
+		width: 349px;
+	}
+}*/
 
 
